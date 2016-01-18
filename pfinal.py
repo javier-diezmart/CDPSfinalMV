@@ -81,7 +81,7 @@ for n in range (1, 5):
 
 for n in range (2, 5):
 	os.system("lxc-attach -n s"+str(n)+" -- git clone https://github.com/javier-diezmart/CDPSfyTracks")
-	instru = "'cd /cdpsfytracks/ && node app.js'"
+	instru = "'cd /CDPSfyTracks/ && node app.js'"
 	os.system('xterm -hold -e "lxc-attach -n s'+str(n)+' -- sh -c '+instru+'" &')
 	#CDPSfyTracks es el nombre del APIREST
 
