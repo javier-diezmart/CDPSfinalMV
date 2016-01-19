@@ -88,13 +88,13 @@ for n in range (2, 5):
 os.system("lxc-attach -n s1 -- rm -rf /etc/hosts")
 os.system("lxc-attach -n s1 -- wget https://raw.githubusercontent.com/javier-diezmart/CDPSfinalMV/master/hosts/s1/hosts -P /etc")
 
-os.system("lxc-attach -n s1 -- git clone https://github.com/javier-diezmart/CDPSfyMain")
+#os.system("lxc-attach -n s1 -- git clone https://github.com/javier-diezmart/CDPSfyMain")
 #npm install en la MV
-os.system("lxc-attach -n s1 -- mkdir -p /data/db")
-os.system("lxc-attach -n s1 -- chmod +rwx /data/db")
+#os.system("lxc-attach -n s1 -- mkdir -p /data/db")
+#os.system("lxc-attach -n s1 -- chmod +rwx /data/db")
 
 #os.system("lxc-attach -n s1 -- mongodb > /dev/null 2>&1 &") arrancar la base de datos
 #hayquehacer el npm start
 
 #configuracion balanceador
-os.system("xterm -hold -e 'lxc-attach -n lb -- xr --verbose --server tcp:0:80 --backend 10.1.2.11:5050 --backend 10.1.2.12:5050 --backend 10.1.2.13:5050 --web-interface 0:8001'")
+os.system("xterm -hold -e 'lxc-attach -n lb -- xr --verbose --server tcp:0:80 --backend 10.1.2.14:5050 --backend 10.1.2.12:5050 --backend 10.1.2.13:5050 --web-interface 0:8001'")
