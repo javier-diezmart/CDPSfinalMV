@@ -36,14 +36,14 @@ os.system("lxc-attach -n nas1 -- gluster volume start nas")
 
 #configuracion servidores
 
-os.system("lxc-attach -n s1 -- mkdir /mnt/nas")
-os.system("lxc-attach -n s1 -- mount -t glusterfs 10.1.3.21:/nas /mnt/nas")
-os.system("lxc-attach -n s2 -- mkdir /mnt/nas")
-os.system("lxc-attach -n s2 -- mount -t glusterfs 10.1.3.21:/nas /mnt/nas")
-os.system("lxc-attach -n s3 -- mkdir /mnt/nas")
-os.system("lxc-attach -n s3 -- mount -t glusterfs 10.1.3.21:/nas /mnt/nas")
-os.system("lxc-attach -n s4 -- mkdir /mnt/nas")
-os.system("lxc-attach -n s4 -- mount -t glusterfs 10.1.3.21:/nas /mnt/nas")
+os.system("lxc-attach -n s1 -- sudo mkdir /mnt/nas")
+os.system("lxc-attach -n s1 -- sudo mount -t glusterfs 10.1.3.21:/nas /mnt/nas")
+os.system("lxc-attach -n s2 -- sudo mkdir /mnt/nas")
+os.system("lxc-attach -n s2 -- sudo mount -t glusterfs 10.1.3.21:/nas /mnt/nas")
+os.system("lxc-attach -n s3 -- sudo mkdir /mnt/nas")
+os.system("lxc-attach -n s3 -- sudo mount -t glusterfs 10.1.3.21:/nas /mnt/nas")
+os.system("lxc-attach -n s4 -- sudo mkdir /mnt/nas")
+os.system("lxc-attach -n s4 -- sudo mount -t glusterfs 10.1.3.21:/nas /mnt/nas")
 
 #configuracion nagios
 
