@@ -30,7 +30,8 @@ os.system("vnx -f p7.xml -v --create")
 os.system("lxc-attach -n nas1 -- gluster peer probe 10.1.3.21")
 os.system("lxc-attach -n nas1 -- gluster peer probe 10.1.3.22")
 os.system("lxc-attach -n nas1 -- gluster peer probe 10.1.3.23")
-os.system("lxc-attach -n nas1 -- gluster volume create nas replica 3 nas1:/nas nas2:/nas nas3:/nas force")
+os.system("sleep 30")
+os.system("lxc-attach -n nas1 -- gluster volume create nas replica 3 10.1.3.21:/nas 10.1.3.22:/nas 10.1.3.23:/nas force")
 os.system("lxc-attach -n nas1 -- gluster volume start nas")
 # puede haber error nas1,2,3 por direcciones ip
 
